@@ -14,11 +14,13 @@ public class UsersController {
     @Autowired
     private UserService userService;
 
+
     @PostMapping
     public Users adduser(@RequestBody Users user){
 
         return userService.adduser(user);
     }
+
 
     @GetMapping("withsaving/{savingnumber}")
     public ResponseEntity<Responsedto> getuser(@PathVariable("savingnumber") String savingnumber){
